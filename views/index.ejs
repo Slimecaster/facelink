@@ -9,9 +9,9 @@
 <body>
 <div class="container">
     <h1>Facelink medie</h1>
-    <a href="/new">Add New User</a>
+    <a href="/">Add New User</a>
     <ul>
-        <% User.forEach(user => { %>
+        <% users.forEach(user => { %>
             <li>
                 <div class="person-info">
                     <%= user.name %> <%= user.email %> som <%= user.posts %>

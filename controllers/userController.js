@@ -19,8 +19,8 @@ exports.createUser = async (req, res) => {
 //Henter alle users og viser dem
 exports.getAllUsers = async (req, res) => {
     try {
-        const user1 = await user.find();
-        res.render('index', {users: user});
+        const users = await user.find();
+        res.render('index', {users: users});
     }catch(err){
         console.error("Fejl ved hentning af user:",err);
         res.status(500).send("Fejl ved hentning af person.")
