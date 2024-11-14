@@ -14,7 +14,7 @@
         <% users.forEach(user => { %>
             <li>
                 <div class="person-info">
-                    <%= user.name %> <%= user.email %> som <%= user.posts %>
+                    <%= user.name %> | <%= user.email %>
                 </div>
                 <div class="actions">
                     <form action="/person/<%= user._id %>/delete" method="POST">
