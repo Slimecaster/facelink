@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facelink</title>
+
+</head>
+<body>
+<div class="container">
+    <h1>Facelink medie</h1>
+    <a href="/new">Add New User</a>
+    <ul>
+        <% User.forEach(user => { %>
+            <li>
+                <div class="person-info">
+                    <%= user.name %> <%= user.email %> som <%= user.posts %>
+                </div>
+                <div class="actions">
+                    <form action="/person/<%= user._id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form action="/person/<%= user._id %>/update" method="GET">
+                        <button type="submit" class="update">Update</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+</div>
+</body>
