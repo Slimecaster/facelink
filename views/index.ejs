@@ -17,10 +17,10 @@
                     <%= user.name %> | <%= user.email %>
                 </div>
                 <div class="actions">
-                    <form action="/person/<%= user._id %>/delete" method="POST">
+                    <form action="/user/<%= user._id %>/delete" method="POST">
                         <button type="submit">Delete</button>
                     </form>
-                    <form action="/person/<%= user._id %>/update" method="GET">
+                    <form action="/user/<%= user._id %>/update" method="GET">
                         <button type="submit" class="update">Update</button>
                     </form>
                 </div>

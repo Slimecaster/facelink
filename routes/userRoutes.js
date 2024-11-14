@@ -21,7 +21,7 @@ router.get('/user/:id/update', async (req,res)=>{
 
 router.get('/',userController.getAllUsers);
 router.post('/user',userController.createUser);
-router.put('/user/:id/update',userController.updateUser);
-router.delete('/user/:id/delete',userController.deleteUser);
+router.post('/user/:id/update',userController.updateUser);
+router.post('/user/:id/delete',userController.deleteUser);
 
 module.exports = router;

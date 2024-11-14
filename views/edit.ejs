@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Edit User</h1>
-<form action="/person/<%= user._id %>/update" method="POST">
+<form action="/user/<%= user._id %>/update" method="POST">
     <label>Name: <input type="text" name="name" value="<%= user.name %>"></label><br>
     <label>Email: <input type="text" name="email" value="<%= user.email %>"></label><br>
     <label>Posts: <input type="text" name="posts" value="<%= user.posts %>"></label><br>

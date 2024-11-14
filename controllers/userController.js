@@ -35,6 +35,7 @@ exports.updateUser = async (req, res) => {
             email: req.body.email,
             posts: req.body.posts
         });
+        res.redirect('/');
     }catch(err){
         console.error("Fejl ved opdatering af user:",err);
         res.status(500).send("Fejl ved opdatering af user:",err);
